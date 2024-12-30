@@ -40,11 +40,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtCustomerShoppingAmount = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnList = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnCustomerList = new System.Windows.Forms.Button();
+            this.btnCustomerAdd = new System.Windows.Forms.Button();
+            this.btnCustomerDelete = new System.Windows.Forms.Button();
+            this.btnCustomerUpdate = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnGetCustomerById = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -156,46 +157,49 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Alışveriş Tutar:";
             // 
-            // btnList
+            // btnCustomerList
             // 
-            this.btnList.BackColor = System.Drawing.Color.Lime;
-            this.btnList.Location = new System.Drawing.Point(120, 344);
-            this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(132, 51);
-            this.btnList.TabIndex = 12;
-            this.btnList.Text = "Listele";
-            this.btnList.UseVisualStyleBackColor = false;
+            this.btnCustomerList.BackColor = System.Drawing.Color.Lime;
+            this.btnCustomerList.Location = new System.Drawing.Point(120, 344);
+            this.btnCustomerList.Name = "btnCustomerList";
+            this.btnCustomerList.Size = new System.Drawing.Size(132, 51);
+            this.btnCustomerList.TabIndex = 12;
+            this.btnCustomerList.Text = "Listele";
+            this.btnCustomerList.UseVisualStyleBackColor = false;
+            this.btnCustomerList.Click += new System.EventHandler(this.btnCustomerList_Click);
             // 
-            // btnAdd
+            // btnCustomerAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Lime;
-            this.btnAdd.Location = new System.Drawing.Point(120, 419);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(132, 53);
-            this.btnAdd.TabIndex = 13;
-            this.btnAdd.Text = "Ekle";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnCustomerAdd.BackColor = System.Drawing.Color.Lime;
+            this.btnCustomerAdd.Location = new System.Drawing.Point(120, 419);
+            this.btnCustomerAdd.Name = "btnCustomerAdd";
+            this.btnCustomerAdd.Size = new System.Drawing.Size(132, 53);
+            this.btnCustomerAdd.TabIndex = 13;
+            this.btnCustomerAdd.Text = "Ekle";
+            this.btnCustomerAdd.UseVisualStyleBackColor = false;
+            this.btnCustomerAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnDelete
+            // btnCustomerDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Lime;
-            this.btnDelete.Location = new System.Drawing.Point(120, 493);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(132, 51);
-            this.btnDelete.TabIndex = 14;
-            this.btnDelete.Text = "Sil";
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnCustomerDelete.BackColor = System.Drawing.Color.Lime;
+            this.btnCustomerDelete.Location = new System.Drawing.Point(120, 493);
+            this.btnCustomerDelete.Name = "btnCustomerDelete";
+            this.btnCustomerDelete.Size = new System.Drawing.Size(132, 51);
+            this.btnCustomerDelete.TabIndex = 14;
+            this.btnCustomerDelete.Text = "Sil";
+            this.btnCustomerDelete.UseVisualStyleBackColor = false;
+            this.btnCustomerDelete.Click += new System.EventHandler(this.btnCustomerDelete_Click);
             // 
-            // btnUpdate
+            // btnCustomerUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Lime;
-            this.btnUpdate.Location = new System.Drawing.Point(120, 567);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(132, 51);
-            this.btnUpdate.TabIndex = 15;
-            this.btnUpdate.Text = "Güncelle";
-            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnCustomerUpdate.BackColor = System.Drawing.Color.Lime;
+            this.btnCustomerUpdate.Location = new System.Drawing.Point(120, 567);
+            this.btnCustomerUpdate.Name = "btnCustomerUpdate";
+            this.btnCustomerUpdate.Size = new System.Drawing.Size(132, 51);
+            this.btnCustomerUpdate.TabIndex = 15;
+            this.btnCustomerUpdate.Text = "Güncelle";
+            this.btnCustomerUpdate.UseVisualStyleBackColor = false;
+            this.btnCustomerUpdate.Click += new System.EventHandler(this.btnCustomerUpdate_Click);
             // 
             // dataGridView1
             // 
@@ -203,19 +207,31 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(329, 74);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1043, 573);
+            this.dataGridView1.Size = new System.Drawing.Size(1472, 573);
             this.dataGridView1.TabIndex = 16;
+            // 
+            // btnGetCustomerById
+            // 
+            this.btnGetCustomerById.BackColor = System.Drawing.Color.Lime;
+            this.btnGetCustomerById.Location = new System.Drawing.Point(120, 649);
+            this.btnGetCustomerById.Name = "btnGetCustomerById";
+            this.btnGetCustomerById.Size = new System.Drawing.Size(132, 51);
+            this.btnGetCustomerById.TabIndex = 17;
+            this.btnGetCustomerById.Text = "Id\'ye Göre Getir";
+            this.btnGetCustomerById.UseVisualStyleBackColor = false;
+            this.btnGetCustomerById.Click += new System.EventHandler(this.btnGetCustomerById_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 701);
+            this.ClientSize = new System.Drawing.Size(1813, 812);
+            this.Controls.Add(this.btnGetCustomerById);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.btnList);
+            this.Controls.Add(this.btnCustomerUpdate);
+            this.Controls.Add(this.btnCustomerDelete);
+            this.Controls.Add(this.btnCustomerAdd);
+            this.Controls.Add(this.btnCustomerList);
             this.Controls.Add(this.txtCustomerShoppingAmount);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtCustomerBalance);
@@ -252,11 +268,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCustomerShoppingAmount;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnList;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnCustomerList;
+        private System.Windows.Forms.Button btnCustomerAdd;
+        private System.Windows.Forms.Button btnCustomerDelete;
+        private System.Windows.Forms.Button btnCustomerUpdate;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnGetCustomerById;
     }
 }
 
