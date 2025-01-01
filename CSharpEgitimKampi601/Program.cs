@@ -17,7 +17,8 @@ namespace CSharpEgitimKampi601
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(new CustomerOperations()));
+            //Application.Run(new Form1(new CustomerOperations()));
+            Application.Run(new FrmCustomer());
         }
     }
 }
